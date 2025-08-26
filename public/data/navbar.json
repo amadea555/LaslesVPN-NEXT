@@ -1,0 +1,9 @@
+{
+  "navbar": [
+    { "text": "About", "link": "about.html" },
+    { "text": "Features", "link": "features.html" },
+    { "text": "Pricing", "link": "pricing.html" },
+    { "text": "Testimonials", "link": "testimonials.html" },
+    { "text": "Help", "link": "help.html" }
+  ]
+}

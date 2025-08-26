@@ -1,0 +1,399 @@
+.sectionFive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  width: 100%;
+  padding: 45px 100px 0 100px;
+}
+
+.sectionFiveTitle {
+  width: 100%;
+  font-size: 32px;
+  font-family: "rubik";
+  font-weight: bold;
+  text-align: center;
+}
+
+.sectionFiveSubtext {
+  max-width: 685px;
+  width: 100%;
+  font-size: 16px;
+  font-family: "rubik";
+  padding: 16px 0 55px;
+  color: #0b132a;
+  text-align: center;
+}
+
+.reviewWrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.reviewBox {
+  background-color: white;
+  border: 2px solid #ddd;
+  padding: 32px 24px;
+  max-width: 410px;
+  max-height: 247px;
+  width: 100%;
+  border-radius: 10px;
+  transition: all 0.4s cubic-bezier(1, 0, 0, 1);
+}
+
+.reviewBox:hover {
+  border: 2px solid #f44336;
+}
+
+.reviewBoxTop {
+  max-width: 359px;
+  max-height: 55px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.reviewBoxProfile img {
+  max-width: 50px;
+  max-height: 51px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.reviewBoxIdentity {
+  padding: 0 16px 0 16px;
+  max-width: 150px;
+  max-height: 55px;
+  width: 100%;
+  height: 100%;
+  margin: 0 100px 0 0;
+  padding: 0 0 0 16px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.reviewBoxName h5 {
+  padding: 5px 0 0 0;
+  text-align: start;
+  font-size: 18px;
+  font-family: "rubik";
+  color: #0b132a;
+  font-weight: 500;
+}
+
+.reviewBoxPlace {
+  text-align: start;
+  font-size: 13px;
+  font-family: "rubik";
+  color: #0b132a;
+  font-weight: 400;
+}
+
+.reviewBoxRating {
+  margin: 0 0 10px 0;
+  max-width: 56px;
+  max-height: 55px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.reviewBoxScore {
+  text-align: start;
+  margin: 0 16px 0 0;
+  font-size: 16px;
+  font-family: "rubik";
+  font-weight: 400;
+}
+
+.reviewBoxStar img {
+  align-content: end;
+  max-width: 16px;
+  max-height: 17px;
+  width: 100%;
+  height: 100%;
+}
+
+.reviewBoxCenter {
+  max-width: 359px;
+  max-height: 108px;
+  width: 100%;
+  height: 100%;
+}
+
+.reviewBoxText {
+  padding: 20px 0 0 0;
+  font-family: "rubik";
+  font-weight: 400;
+  font-size: 16px;
+  color: #0b132a;
+  text-align: start;
+  line-height: 27px;
+}
+
+.sectionFiveSlide {
+  max-width: 1336px;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slideMove img {
+  max-width: 102px;
+  width: 100%;
+  height: auto;
+}
+
+.slideArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrowButtons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Style umum tombol */
+.arrowBtn {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #f44336;
+  background-color: white;
+  color: #f44336; /* warna utama mengikuti currentColor */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.arrowBtn:hover {
+  transform: scale(1.1);
+}
+
+/* kondisi active: lingkaran merah, panah putih */
+.arrowBtn.active {
+  background-color: #f44336;
+  color: white;
+}
+
+/* kondisi normal: lingkaran putih, panah merah */
+.arrowBtn.inactive {
+  background-color: white;
+  color: #f44336;
+}
+
+.arrowBtn svg {
+  width: 30px;
+  height: auto;
+}
+
+.subscribeContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1094px;
+  width: 100%;
+}
+
+.subscribeWrapper {
+  display: flex;
+  padding: 64px 80px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 950px;
+  background: none;
+  box-shadow: 2px 2px 5px 1px #eee, -2px -2px 5px 2px #eee;
+  margin-top: 90px;
+  border-radius: 2px;
+}
+
+.subscribeText {
+  max-width: 468px;
+  max-height: 122px;
+  width: 100%;
+  height: 100%;
+}
+
+.subscribeTitle {
+  font-size: 29px;
+  font-family: "rubik";
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.subscribeSubtext {
+  font-size: 16px;
+  font-family: "rubik";
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.subscribeButton {
+  max-width: 218px;
+  width: 100%;
+  background-color: hsl(0, 90%, 59%);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "rubik";
+  font-size: 17px;
+  padding: 20px 25px;
+  transform: scale(1);
+  transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+  text-align: center;
+}
+
+.subscribeButton:hover {
+  background-color: #f53838;
+  transform: scale(1.03) translateY(-0.2rem);
+  box-shadow: 2px 2px 2px 1px rgba(245, 56, 56, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .sectionFive {
+      padding: 0 20px 30px;
+    }
+
+    .sectionFiveTitle {
+      font-size: 28px;
+    }
+
+    .sectionFiveSubtext {
+      font-size: 14px;
+    }
+
+    .reviewWrapper {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .reviewBox {
+      padding: 10px;
+      height: 100%;
+    }
+
+    .reviewBoxName h5 {
+      font-size: 14px;
+    }
+
+    .reviewBoxPlace {
+      font-size: 10px;
+    }
+
+    .reviewBoxText {
+      font-size: 12px;
+      padding: 5px 0 0 0;
+      line-height: 20px;
+    }
+
+    .reviewBoxIdentity {
+      margin: 0;
+      width: 50%;
+    }
+
+    .reviewBoxRating {
+      margin: 0;
+    }
+
+    .reviewBoxScore {
+      font-size: 13px;
+      margin: 2px;
+    }
+
+    .sectionFiveSlide {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 30px 0 20px;
+    }
+
+    .slideMove img {
+      max-width: 80px; /* kecilkan gambar */
+      width: 100%;
+      margin-right: 100px;
+    }
+
+    .arrowButtons {
+      gap: 10px; /* kurangi jarak antar tombol */
+    }
+
+    .arrowBtn {
+      max-width: 36px; /* kecilkan tombol bulat */
+      max-height: 36px;
+      border-width: 1.5px; /* tipiskan border */
+    }
+
+    .subscribeWrapper {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      text-align: center;
+      padding: 20px 10px;
+      width: 100%; /* biar lebar ngikutin layar */
+      height: 100%;
+      margin: 0;
+      box-shadow: none;
+    }
+
+    .subscribeContent {
+      display: flex;
+      justify-content: start;
+      flex-direction: column; /* teks di atas, tombol di bawah */
+      gap: 10px;
+    }
+
+    .subscribeText {
+      max-width: 100%;
+    }
+
+    .subscribeTitle {
+      font-size: 22px;
+      text-align: start;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .subscribeSubtext {
+      font-size: 13px;
+      padding: 10px 0;
+      margin: 0;
+      text-align: start;
+    }
+
+    .subscribeButton {
+      width: 90%;
+      font-size: 11px;
+      margin: 15px 0 0;
+      padding: 15px 40px;
+      font-size: 15px;
+      text-align: center;
+    }
+}

@@ -1,0 +1,153 @@
+.footerWrapper {
+  height: max-content;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 80px 60px 80px;
+  background-color: #f8f8f8;
+  font-family: "Rubik", sans-serif;
+  color: #0b132a;
+  margin: 100px 0 0 0;
+}
+
+.footerLeftContent {
+  max-width: 350px;
+  width: 100%;
+}
+
+.footerLogoText {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footerLogoText img {
+  max-width: 149px;
+  width: 100%;
+  height: auto;
+}
+
+.footerSubtext {
+  margin: 20px 0;
+  color: #0b132a;
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.footerSocialWrapper {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.footerSocialWrapper img {
+  width: 33px;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+}
+
+.footerSocialWrapper img:hover {
+  transform: scale(1.03) translateY(-0.2rem);
+  transition: 0.3s;
+}
+
+.footerRightContent {
+  display: flex;
+  gap: 80px;
+}
+
+.footerColumn h4 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+
+.footerColumn ul {
+  list-style: none;
+  line-height: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.footerColumn ul li {
+  margin-bottom: 12px;
+}
+
+.footerColumn ul li a {
+  text-decoration: none;
+  color: #4f5665;
+  font-size: 16px;
+}
+
+.footerColumn ul li a:hover {
+  color: #f53838;
+  transition: 0.3s;
+}
+
+.footerCopyright {
+  align-items: end;
+  margin: 0;
+  font-size: 15px;
+  color: #afb5c0;
+}
+
+@media screen and (max-width: 768px) {
+  .footerWrapper {
+    padding: 0 20px 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .footerColumn h4 {
+    width: 50%;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .footerColumn ul li {
+    width: 50%;
+    margin: 0;
+  }
+
+  .footerColumn ul li a {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .footerRightContent {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .footer-LeftContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+  }
+
+  .footerSubtext {
+    font-size: 13px;
+  }
+  .footerSocialWrapper {
+    margin-bottom: 10px;
+  }
+
+  .footerSocialWrapper img {
+    margin: 0;
+  }
+
+  .footerCopyright {
+    font-size: 12px;
+    margin: 0;
+  }
+}

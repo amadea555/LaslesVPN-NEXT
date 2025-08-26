@@ -1,0 +1,51 @@
+{
+  "section-three-title": ["Choose Your Plan"],
+
+  "section-three-subtext": [
+    "Let's choose the best package that is best for you and explore it happily and cheerfully."
+  ],
+
+  "plan-item-image": "./img/image-plan.png",
+
+  "box-plan-one-title": ["Free Plan"],
+
+  "box-plan-one-list": [
+    "Unlimited Bandwidth",
+    "Encrypted Connection",
+    "No Traffic Logs",
+    "Works on All Devices"
+  ],
+
+  "box-plan-two-title": ["Standard Plan"],
+
+  "box-plan-two-list": [
+    "Unlimited Bandwidth",
+    "Encrypted Connection",
+    "No Traffic Logs",
+    "Works on All Devices",
+    "Connect Anywhere"
+  ],
+
+  "box-plan-three-title": ["Premium Plan"],
+
+  "box-plan-three-list": [
+    "Unlimited Bandwidth",
+    "Encrypted Connection",
+    "No Traffic Logs",
+    "Works on All Devices",
+    "Connect Anywhere",
+    "Get New Features"
+  ],
+
+  "box-plan-one-price": [
+    "Free"
+  ],
+
+  "box-plan-two-price": [
+    "$9 / mo"
+  ],
+
+    "box-plan-three-price": [
+    "$12 / mo"
+  ]
+}

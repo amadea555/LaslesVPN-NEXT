@@ -1,0 +1,61 @@
+.sectionFour {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100vw;
+  width: 100%;
+  padding: 100px 100px 0 100px;
+}
+
+.sectionFourTitle {
+  width: 100%;
+  font-size: 32px;
+  font-family: "rubik";
+  font-weight: bold;
+  text-align: center;
+}
+
+.sectionFourSubtext {
+  font-size: 16px;
+  font-family: "rubik";
+  margin: 16px 0 0;
+  color: #4f5665;
+  text-align: center;
+}
+
+.sectionFourMap img {
+  padding: 60px 0 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.sectionFourSponsor img {
+  padding: 60px 0 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .sectionFour {
+    padding: 40px 20px 10px;
+  }
+
+  .sectionFourMap img {
+    padding: 40px 0;
+  }
+  .sectionFourTitle {
+    font-size: 28px;
+  }
+
+  .sectionFourSubtext {
+    font-size: 14px;
+  }
+
+  .sectionFourSponsor img {
+    width: 100%;
+    height: fit-content;
+    padding: 10px 0;
+  }
+}

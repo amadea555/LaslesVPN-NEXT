@@ -1,0 +1,111 @@
+.sectionTwo {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100vw;
+  width: 100%;
+  padding: 1px 100px 100px 100px;
+}
+
+.imageFeatures img {
+  max-width: 684px;
+  width: 100%;
+  height: fit-content;
+  margin-right: 30px;
+}
+
+.contentFeatures {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.titleFeatures {
+  max-width: 497px;
+  width: 100%;
+  font-family: "rubik", sans-serif;
+  font-size: 33px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #0b132a;
+}
+
+.subtextFeatures {
+  font-family: "rubik", sans-serif;
+  font-size: 16px;
+  color: #0b132a;
+  line-height: 1.6;
+  max-width: 620px;
+}
+
+.listFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.featureItem::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("/img/checklist.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.featureItem {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.featureItem figcaption {
+  font-family: "rubik", sans-serif;
+  font-size: 15px;
+  color: #4f5665;
+}
+
+@media screen and (max-width: 768px) {
+  .sectionTwo {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .imageFeatures img {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 291px;
+    height: auto;
+  }
+
+  .titleFeatures {
+    margin: 0;
+    font-size: 26px;
+  }
+
+  .subtextFeatures {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+  }
+
+  .contentFeatures {
+    margin: 20px;
+  }
+
+  .featureItem {
+    gap: 20px;
+  }
+}

@@ -1,0 +1,183 @@
+.sectionOne {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100vw;
+  height: auto;
+  padding: 1px 100px 0 100px;
+}
+
+.contentCenterDiv {
+  height: auto;
+  display: flex;
+}
+.contentCenterDiv .centerTextTitle {
+  margin-top: 150px;
+  text-align: start;
+  font-family: "rubik";
+  font-weight: 500;
+  font-size: 31px;
+}
+.contentCenterDiv .centerTextContent {
+  margin-top: 30px;
+  max-width: 612px;
+  width: 100%;
+  font-family: "rubik";
+  text-align: start;
+  font-weight: 400;
+  font-size: 17.6px;
+  line-height: 30px;
+}
+.buttonGetStarted {
+  max-width: 255px;
+  width: 100%;
+  margin-top: 20px;
+  background-color: #f53838;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "rubik";
+  font-size: 18px;
+  padding: 20px 50px;
+  transform: scale(1);
+  transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+}
+
+.buttonGetStarted:hover {
+  background-color: #f53838;
+  transform: scale(1.03) translateY(-0.2rem);
+  box-shadow: 2px 2px 2px 1px rgba(245, 56, 56, 0.3);
+}
+
+.contentCenterDiv .centerImage {
+  margin: 25px 90px 0;
+  max-width: 664px;
+  width: 100%;
+  height: fit-content;
+}
+.contentBottomDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  background: none;
+  box-shadow: 1px 1px 1px 1px #eee, -1px -1px 1px 1px #eee;
+  margin: 158px auto 30px;
+  border-radius: 2px;
+}
+
+.bottomBoxDiv {
+  margin: 40px 50px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.bottomBoxIcon {
+  max-width: 70px;
+  max-height: 70px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomBoxIcon img {
+  max-width: 55px;
+  max-height: 55px;
+  width: 100%;
+  height: 100%;
+}
+
+.bottomBoxText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bottomBoxNumber {
+  font-family: "rubik";
+  font-size: 20px;
+  font-weight: bold;
+  color: #0b132a;
+}
+
+.bottomBoxLabel {
+  font-family: "rubik";
+  font-size: 14px;
+  color: #4f5665;
+}
+
+@media screen and (max-width: 768px) {
+  .sectionOne {
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .contentCenterDiv {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .contentCenterDiv .centerImage {
+    margin: 0;
+    width: 262px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contentCenterDiv .centerTextTitle {
+    margin: 20px 0 10px;
+    font-size: 31px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .contentCenterDiv .centerTextContent {
+    margin-top: 0;
+    font-size: 14px;
+  }
+
+  .buttonGetStarted {
+    width: 75%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .contentBottomDiv {
+    box-shadow: none;
+    margin: 0;
+    padding: 40px 70px 50px 0;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .bottomBoxDiv {
+    margin: 0;
+  }
+
+  .bottomBoxIcon {
+    padding: 20px 0;
+  }
+
+  .bottomBoxNumber {
+    font-size: 16px;
+  }
+}

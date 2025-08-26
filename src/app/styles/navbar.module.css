@@ -1,0 +1,125 @@
+.navbarWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100vw;
+  height: auto;
+  padding: 1px 100px 0 100px;
+}
+
+.navbarDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100vw;
+  width: 100%;
+}
+.navbarLeft {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.navbarCenter,
+.navbarRight {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin: 25px;
+}
+.navbarLogo {
+  display: flex;
+  align-items: center;
+}
+.navbarLogo .logoImage {
+  height: fit-content;
+  max-width: 155px;
+  width: 100%;
+  height: auto;
+}
+.navbarMenu ul {
+  text-align: center;
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin-left: 100px;
+  padding: 0;
+}
+.navbarMenu ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: "rubik", serif;
+  font-size: 17.6px;
+  transition: color 0.3s;
+}
+.navbarMenu ul li a:hover {
+  color: #f53838;
+}
+.navbarButton {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.navbarButton .buttonSignin {
+  background-color: transparent;
+  border: none;
+  border-radius: 50px;
+  color: #f53838;
+  font-family: "rubik";
+  font-size: 17.6px;
+  padding: 8px 32px;
+  transform: scale(1);
+  transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+}
+.navbarButton .buttonSignin:hover {
+  background-color: #f53838;
+  color: #fff;
+  transform: scale(1.03) translateY(-0.2rem);
+  box-shadow: 2px 2px 2px 1px rgba(245, 56, 56, 0.3);
+}
+.navbarButton .buttonSignup {
+  background-color: transparent;
+  border: 1px solid #f53838;
+  border-radius: 50px;
+  color: #f53838;
+  font-family: "rubik";
+  font-size: 17.6px;
+  padding: 8px 32px;
+  transform: scale(1);
+  transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+}
+.navbarButton .buttonSignup:hover {
+  background-color: #f53838;
+  color: #fff;
+  transform: scale(1.03) translateY(-0.2rem);
+  box-shadow: 2px 2px 2px 1px rgba(245, 56, 56, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .navbarWrapper {
+    padding: 20px 20px;
+  }
+  .navbarMenu ul {
+    display: none;
+  }
+  .navbarDiv {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbarRight,
+  .navbarCenter {
+    display: none;
+  }
+  .navbarLogo {
+    display: flex;
+    justify-content: center;
+    width: 149px;
+    height: auto;
+  }
+  .navbarLogo .logoImage {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+  }
+}
