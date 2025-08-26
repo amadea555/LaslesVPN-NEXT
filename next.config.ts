@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // prefix repo kamu, misal "LaslesVPN-NEXT"
+  basePath: "/LaslesVPN-NEXT",
+  assetPrefix: "/LaslesVPN-NEXT/",
 };
+
+module.exports = nextConfig;
 
 export default nextConfig;
