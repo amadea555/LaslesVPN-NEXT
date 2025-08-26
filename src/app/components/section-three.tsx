@@ -42,7 +42,7 @@ export default function SectionThree() {
     }
 
     fetchData();
-  });
+  }, []);
   return (
     <section className={styles.sectionThree}>
       <div className={styles.titlePlan}>

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import styles from "../styles/navbar.module.css";
+import Link from "next/link";
 
 interface NavbarItemsTypes {
   link: string;
@@ -50,7 +51,7 @@ export default function Navbar() {
               {navbar &&
                 navbar.navbar.map((item, index) => (
                   <li key={index}>
-                    <a href={item.link}>{item.text}</a>
+                    <Link href={item.link}>{item.text}</Link>
                   </li>
                 ))}
             </ul>
