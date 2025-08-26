@@ -178,8 +178,8 @@
 
   .boxPlanContainer {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     padding: 0;
     width: 100%;
   }
