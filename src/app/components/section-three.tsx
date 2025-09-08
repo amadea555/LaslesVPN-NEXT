@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styles from "../styles/section-three.module.css";
 
 export default function SectionThree() {
@@ -16,6 +16,29 @@ export default function SectionThree() {
   const [boxPlanOnePrice, setBoxPlanOnePrice] = useState("");
   const [boxPlanTwoPrice, setBoxPlanTwoPrice] = useState("");
   const [boxPlanThreePrice, setBoxPlanThreePrice] = useState("");
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const sectionThree = sectionRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true); // update state agar className ikut berubah
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionThree) observer.observe(sectionThree);
+
+    return () => {
+      if (sectionThree) observer.unobserve(sectionThree);
+    };
+  }, []);
 
   useEffect(() => {
     async function fetchData() {
@@ -44,14 +67,17 @@ export default function SectionThree() {
     fetchData();
   }, []);
   return (
-    <section className={styles.sectionThree}>
+    <section
+      ref={sectionRef}
+      className={`${styles.sectionThree} ${isVisible ? styles.show : ""}`}
+    >
+      {" "}
       <div className={styles.titlePlan}>
         <p>{title}</p>
       </div>
       <div className={styles.subtextPlan}>
         <p>{subText}</p>
       </div>
-
       {/* Container semua plan */}
       <div className={styles.boxPlanContainer}>
         {/* Free Plan */}
@@ -106,12 +132,10 @@ export default function SectionThree() {
           <div className={styles.boxListPlanBottom}>
             <div className={styles.boxPricePlan}>
               <p>
-                  {boxPlanTwoPrice.split("$9").map((part, index, arr) => (
+                {boxPlanTwoPrice.split("$9").map((part, index, arr) => (
                   <React.Fragment key={index}>
                     {part}
-                    {index < arr.length - 1 && (
-                      <strong key={index}>$9</strong>
-                    )}
+                    {index < arr.length - 1 && <strong key={index}>$9</strong>}
                   </React.Fragment>
                 ))}
               </p>
@@ -139,12 +163,10 @@ export default function SectionThree() {
           <div className={styles.boxListPlanBottom}>
             <div className={styles.boxPricePlan}>
               <p>
-                  {boxPlanThreePrice.split("$12").map((part, index, arr) => (
+                {boxPlanThreePrice.split("$12").map((part, index, arr) => (
                   <React.Fragment key={index}>
                     {part}
-                    {index < arr.length - 1 && (
-                      <strong key={index}>$12</strong>
-                    )}
+                    {index < arr.length - 1 && <strong key={index}>$12</strong>}
                   </React.Fragment>
                 ))}
               </p>

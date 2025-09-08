@@ -2,6 +2,18 @@
   text-align: center;
   font-family: Arial, sans-serif;
   padding: 1px 100px 0 100px;
+
+  /* kondisi awal sebelum muncul */
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(30px);
+  transition: all 1s linear;
+}
+
+.sectionThree.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
 }
 
 .titlePlan {

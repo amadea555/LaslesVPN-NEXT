@@ -6,6 +6,16 @@
   max-width: 100vw;
   width: 100%;
   padding: 45px 100px 0 100px;
+  /* kondisi awal sebelum muncul */
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(30px);
+  transition: all 1s linear;
+}
+.sectionFive.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
 }
 
 .sectionFiveTitle {
@@ -273,127 +283,127 @@
 
 @media screen and (max-width: 768px) {
   .sectionFive {
-      padding: 0 20px 30px;
-    }
+    padding: 0 20px 30px;
+  }
 
-    .sectionFiveTitle {
-      font-size: 28px;
-    }
+  .sectionFiveTitle {
+    font-size: 28px;
+  }
 
-    .sectionFiveSubtext {
-      font-size: 14px;
-    }
+  .sectionFiveSubtext {
+    font-size: 14px;
+  }
 
-    .reviewWrapper {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-    }
+  .reviewWrapper {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
 
-    .reviewBox {
-      padding: 10px;
-      height: 100%;
-    }
+  .reviewBox {
+    padding: 10px;
+    height: 100%;
+  }
 
-    .reviewBoxName h5 {
-      font-size: 14px;
-    }
+  .reviewBoxName h5 {
+    font-size: 14px;
+  }
 
-    .reviewBoxPlace {
-      font-size: 10px;
-    }
+  .reviewBoxPlace {
+    font-size: 10px;
+  }
 
-    .reviewBoxText {
-      font-size: 12px;
-      padding: 5px 0 0 0;
-      line-height: 20px;
-    }
+  .reviewBoxText {
+    font-size: 12px;
+    padding: 5px 0 0 0;
+    line-height: 20px;
+  }
 
-    .reviewBoxIdentity {
-      margin: 0;
-      width: 50%;
-    }
+  .reviewBoxIdentity {
+    margin: 0;
+    width: 50%;
+  }
 
-    .reviewBoxRating {
-      margin: 0;
-    }
+  .reviewBoxRating {
+    margin: 0;
+  }
 
-    .reviewBoxScore {
-      font-size: 13px;
-      margin: 2px;
-    }
+  .reviewBoxScore {
+    font-size: 13px;
+    margin: 2px;
+  }
 
-    .sectionFiveSlide {
-      display: flex;
-      justify-content: space-between;
-      margin: 0;
-      padding: 30px 0 20px;
-    }
+  .sectionFiveSlide {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 30px 0 20px;
+  }
 
-    .slideMove img {
-      max-width: 80px; /* kecilkan gambar */
-      width: 100%;
-      margin-right: 100px;
-    }
+  .slideMove img {
+    max-width: 80px; /* kecilkan gambar */
+    width: 100%;
+    margin-right: 100px;
+  }
 
-    .arrowButtons {
-      gap: 10px; /* kurangi jarak antar tombol */
-    }
+  .arrowButtons {
+    gap: 10px; /* kurangi jarak antar tombol */
+  }
 
-    .arrowBtn {
-      max-width: 36px; /* kecilkan tombol bulat */
-      max-height: 36px;
-      border-width: 1.5px; /* tipiskan border */
-    }
+  .arrowBtn {
+    max-width: 36px; /* kecilkan tombol bulat */
+    max-height: 36px;
+    border-width: 1.5px; /* tipiskan border */
+  }
 
-    .subscribeWrapper {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      text-align: center;
-      padding: 20px 10px;
-      width: 100%; /* biar lebar ngikutin layar */
-      height: 100%;
-      margin: 0;
-      box-shadow: none;
-    }
+  .subscribeWrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    text-align: center;
+    padding: 20px 10px;
+    width: 100%; /* biar lebar ngikutin layar */
+    height: 100%;
+    margin: 0;
+    box-shadow: none;
+  }
 
-    .subscribeContent {
-      display: flex;
-      justify-content: start;
-      flex-direction: column; /* teks di atas, tombol di bawah */
-      gap: 10px;
-    }
+  .subscribeContent {
+    display: flex;
+    justify-content: start;
+    flex-direction: column; /* teks di atas, tombol di bawah */
+    gap: 10px;
+  }
 
-    .subscribeText {
-      max-width: 100%;
-    }
+  .subscribeText {
+    max-width: 100%;
+  }
 
-    .subscribeTitle {
-      font-size: 22px;
-      text-align: start;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
+  .subscribeTitle {
+    font-size: 22px;
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-    .subscribeSubtext {
-      font-size: 13px;
-      padding: 10px 0;
-      margin: 0;
-      text-align: start;
-    }
+  .subscribeSubtext {
+    font-size: 13px;
+    padding: 10px 0;
+    margin: 0;
+    text-align: start;
+  }
 
-    .subscribeButton {
-      width: 90%;
-      font-size: 11px;
-      margin: 15px 0 0;
-      padding: 15px 40px;
-      font-size: 15px;
-      text-align: center;
-    }
+  .subscribeButton {
+    width: 90%;
+    font-size: 11px;
+    margin: 15px 0 0;
+    padding: 15px 40px;
+    font-size: 15px;
+    text-align: center;
+  }
 }

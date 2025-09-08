@@ -1,9 +1,12 @@
+"use client";
 import styles from "../styles/section-one.module.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 export default function SectionOne() {
   const [title, setTitle] = useState("");
   const [subText, setSubText] = useState("");
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -22,8 +25,32 @@ export default function SectionOne() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const sectionOne = sectionRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true); // update state agar className ikut berubah
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionOne) observer.observe(sectionOne);
+
+    return () => {
+      if (sectionOne) observer.unobserve(sectionOne);
+    };
+  }, []);
+
   return (
-    <section className={styles.sectionOne}>
+    <section
+      ref={sectionRef}
+      className={`${styles.sectionOne} ${isVisible ? styles.show : ""}`}
+    >
       <div className={styles.contentCenterDiv}>
         <div>
           <p className={styles.centerTextTitle}>

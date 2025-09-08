@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "../styles/section-five.module.css";
 
 export default function SectionFive() {
@@ -9,9 +9,30 @@ export default function SectionFive() {
   const [reviews, setReviews] = useState<any[]>([]);
   const [subscribeTitle, setSubscribeTitle] = useState("");
   const [subscribeSubText, setSubscribeSubText] = useState("");
-
-  // state untuk melacak tombol aktif
   const [activeArrow, setActiveArrow] = useState<"left" | "right">("right");
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const sectionFive = sectionRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true); // update state agar className ikut berubah
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionFive) observer.observe(sectionFive);
+
+    return () => {
+      if (sectionFive) observer.unobserve(sectionFive);
+    };
+  }, []);
 
   useEffect(() => {
     async function fetchData() {
@@ -33,8 +54,10 @@ export default function SectionFive() {
   }, []);
 
   return (
-    <section className={styles.sectionFive}>
-      {/* Title & Subtext */}
+ <section
+      ref={sectionRef}
+      className={`${styles.sectionFive} ${isVisible ? styles.show : ""}`}
+    >      {/* Title & Subtext */}
       <div className={styles.sectionFiveTitle}>
         <p>{title}</p>
       </div>

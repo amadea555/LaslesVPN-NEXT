@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import styles from "../styles/navbar.module.css";
 import Link from "next/link";
 
@@ -14,6 +14,29 @@ interface Navbar {
 
 export default function Navbar() {
   const [navbar, setNavbar] = useState<Navbar>();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    loadNavbar();
+  }, []);
+
+  useEffect(() => {
+    // ✅ aman karena hanya jalan di client
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > 50);
+    };
+
+    // Jalankan sekali saat mount untuk set state awal
+    handleScroll();
+
+    // ✅ tambahkan passive listener
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   async function loadNavbar() {
     try {
@@ -26,12 +49,9 @@ export default function Navbar() {
     }
   }
 
-  useEffect(() => {
-    loadNavbar();
-  }, []);
-
   return (
-    <nav className={styles.navbarWrapper}>
+    <nav className={`${styles.navbarWrapper} ${isVisible ? styles.shadow : ""}`}>
+      {" "}
       <div className={styles.navbarDiv}>
         {/* logo part */}
         <div className={styles.navbarLeft}>

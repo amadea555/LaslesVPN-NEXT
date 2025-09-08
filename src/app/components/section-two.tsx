@@ -1,9 +1,34 @@
-import { useEffect, useState } from "react";
+"use client";
+import { useEffect, useState, useRef } from "react";
 import styles from "../styles/section-two.module.css";
+
 export default function SectionTwo() {
   const [title, setTitle] = useState("");
   const [subText, setSubText] = useState("");
   const [list, setList] = useState<string[]>([]);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const sectionTwo = sectionRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true); // update state agar className ikut berubah
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionTwo) observer.observe(sectionTwo);
+
+    return () => {
+      if (sectionTwo) observer.unobserve(sectionTwo);
+    };
+  }, []);
 
   useEffect(() => {
     async function fetchData() {
@@ -11,7 +36,6 @@ export default function SectionTwo() {
         const res = await fetch("/data/section-two.json");
         const data = await res.json();
 
-        // ambil array
         setTitle(data["section-two-title"][0]);
         setSubText(data["section-two-subtext"][0]);
         setList(data["section-two-list"]);
@@ -24,7 +48,10 @@ export default function SectionTwo() {
   }, []);
 
   return (
-    <section className={styles.sectionTwo}>
+    <section
+      ref={sectionRef}
+      className={`${styles.sectionTwo} ${isVisible ? styles.show : ""}`}
+    >
       <div className={styles.imageFeatures}>
         <img src="img/image-features.png" alt="Fitur Utama" />
       </div>
